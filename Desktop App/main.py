@@ -13,9 +13,6 @@ FORM_CLASS, _ = loadUiType(path.join(path.dirname(__file__), "main.ui"))
 
 class MainApp(QMainWindow, FORM_CLASS):
 
-    process_Num = 0
-    segments_list = []
-
     def __init__(self, parent= None):
         super(MainApp, self).__init__(parent)
         QMainWindow.__init__(self)
@@ -63,8 +60,3 @@ def main():
 if __name__ == '__main__':
     main()
 
-
-'''
-self.scene = QGraphicsScene()
-self.view.add(self.scene)
-'''
