@@ -4,9 +4,12 @@ import sys
 class Graph():
 
     def __init__(self, nodes): # vertices 
-        self.nodes = nodes
-        self.nodes_num = len(nodes)
-        self.graph = [None] * self.nodes_num
+        #self.nodes = nodes
+        self.nodes_num = nodes
+        self.graph = []
+        for i in range(self.nodes_num):
+            self.graph.append([])
+
         
 
     def add_node(self): # add a node and return its number
@@ -15,9 +18,9 @@ class Graph():
         return len(self.graph) - 1
     
     def add_edge(self, edge): # edge is a tuple (u, v, w)
-        if edge[0] <= self.nodes_num and edge[1] <= self.nodes_num:
+        if edge[0] > self.nodes_num and edge[1] > self.nodes_num:
             return -1 # indicates edge has a node not in the graph
-        self.graph[edge[0]] = (edge[1], edge[2]) # add edge in the source node place
+        self.graph[edge[0]].append((edge[1], edge[2])) # add edge in the source node place
 
     def add_edges(self, edges): # add multiple edges, edges is list of tuples (u, v, w)
         for edge in edges:
@@ -36,15 +39,17 @@ class Graph():
         # build heap
         self.heap = []
         for i in range(len(self.dists)):
-            self.heap(self.dists[i], i) # heap of tuples (distance, 0) 
+            self.heap.append((self.dists[i], i)) # heap of tuples (distance, 0) 
 
         h.heapify(self.heap)
 
 
         while True:
             try:
-                min = h.heappop(heap)
+                min = h.heappop(self.heap)
+                #print(min)
                 u = min[1] # node num
+                #print(self.graph[u])
                 for edge in self.graph[u]: # get adjacent nodes
                     v = edge[0] 
                     w = edge[1]
@@ -58,6 +63,8 @@ class Graph():
         return self.dists[d]
 
 
+    def get_graph(self):
+        return self.graph
 
         
 
