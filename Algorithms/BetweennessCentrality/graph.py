@@ -1,3 +1,6 @@
+import heapq as h
+import sys 
+
 class Graph():
 
     def __init__(self, nodes): # vertices 
@@ -19,7 +22,44 @@ class Graph():
     def add_edges(self, edges): # add multiple edges, edges is list of tuples (u, v, w)
         for edge in edges:
             self.add_edge(edge)
-    
+
+    def relax(self, u, v, w):
+        if self.dists[u] + w < self.dists[v]:
+            self.dists[v] =  self.dists[u] + w
+
+
+    def Dijkstra(self, s):
+        
+        self.dists = [sys.maxsize] * self.nodes_num  # fill distances with max number (infinity)
+        self.dists[s] = 0
+
+        # build heap
+        self.heap = []
+        for i in range(len(self.dists)):
+            self.heap(self.dists[i], i) # heap of tuples (distance, 0) 
+
+        h.heapify(self.heap)
+
+
+        while True:
+            try:
+                min = h.heappop(heap)
+                u = min[1] # node num
+                for edge in self.graph[u]: # get adjacent nodes
+                    v = edge[0] 
+                    w = edge[1]
+                    self.relax(u, v, w)
+
+            except IndexError as e: # break when heap is empty
+                break
+
+
+
+
+        
+
+
+
     
         
 
