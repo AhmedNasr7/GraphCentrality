@@ -53,6 +53,9 @@ class Graph():
             except IndexError as e: # break when heap is empty
                 break
 
+    def get_distance(self, s, d):
+        self.Dijkstra(s)
+        return self.dists[d]
 
 
 
