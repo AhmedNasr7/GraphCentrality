@@ -19,14 +19,10 @@ for i in range (number_edges):
   graph[my_line[1]].append([my_line[0],my_line[2]])
   i=i+1
   
-centrality_list=[0  for i in range (number_nodes)]
-#getting shortest path for every node and putting it in s_list
+
 for i in range (number_nodes):
-     s_list=Dijkistra.shortest_path(graph,i)
-     for j in range (len(s_list)):
-         centrality_list[i]=centrality_list[i]+s_list[j]
-         j=j+1
-     i=i+1
-#centrality list contained sum of shortest path for every node
-centrality_list=[((number_nodes-1)/i) for i in centrality_list]
-print(centrality_list)
+     output=0
+     output=shortest_path(graph,i)
+     
+     output=(number_nodes-1)/output
+     print(round(output,12))
