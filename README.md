@@ -9,16 +9,16 @@ You are asked to implement three centrality metrics on undirected connected grap
 
 Implementing different algorithms based on graph tory to compute the centrality property for each node in the graph. 
 
-**Algorithms covered:**
- Degree Centrality ,Closeness Centrality
+**You can find Project Description Link:**   [here](https://docs.google.com/document/d/1nzpcXPAZcPWMdtSp2zQEsmFlmfS7dyFqJ--ukhebsMU/mobilebasic?fbclid=IwAR268L274lN7Ty-SUyt3BHG_oQ7pAy-7oXZhB2AWQYXypd1nec2RlFC1O1U)
 
-**Language Used** :Python/C++ 
+**Algorithms covered:**
+ Degree Centrality ,Closeness Centrality.
+
+**Language Used** :Python/C++.
 
 **Visualization Tools**:Networkx, Matplotlib
 
 **Desktop Application Framework**: PyQt5
-
-**Project Description Link:**   [here](https://docs.google.com/document/d/1nzpcXPAZcPWMdtSp2zQEsmFlmfS7dyFqJ--ukhebsMU/mobilebasic?fbclid=IwAR268L274lN7Ty-SUyt3BHG_oQ7pAy-7oXZhB2AWQYXypd1nec2RlFC1O1U)
 
 ## Team Members:
 
