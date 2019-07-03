@@ -18,18 +18,18 @@ Implementing different algorithms based on graph theory to compute the centralit
 4. Matthew Emil
 
 
-**Installing Dependencies**
+## Installing Dependencies
 
-1. Networkx: 
+**1. Networkx:**
 ```
 pip install networkx
 ```
 
-2. Pyqt5 
+**2. Pyqt5:**
 ```
 pip install pyqt5 pyqt5-tools
 ```
-3. matplotlib
+**3. matplotlib:**
 ```
 pip install matplotlib
 ```
